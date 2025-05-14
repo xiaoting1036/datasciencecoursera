@@ -1,0 +1,65 @@
+---
+title: "CodeBook"
+author: "ting"
+date: "2025-05-14"
+output: html_document
+---
+# Code Book for Wearable Computing Tidy Data
+
+This code book describes the variables, the data, and transformations performed to clean up the data.
+
+## Data Source
+Original data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+Original description: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+## Data Set Information
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist.
+
+## Variables
+- `subject`: ID of the test subject (range: 1-30)
+- `activity`: Activity performed (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
+
+### Measurement Variables (all are averages grouped by subject and activity)
+All measurements are normalized and bounded within [-1,1].
+
+- TimeBodyAccelerometerMean-X/Y/Z
+- TimeBodyAccelerometerStd-X/Y/Z
+- TimeGravityAccelerometerMean-X/Y/Z
+- TimeGravityAccelerometerStd-X/Y/Z
+- TimeBodyAccelerometerJerkMean-X/Y/Z
+- TimeBodyAccelerometerJerkStd-X/Y/Z
+- TimeBodyGyroscopeMean-X/Y/Z
+- TimeBodyGyroscopeStd-X/Y/Z
+- TimeBodyGyroscopeJerkMean-X/Y/Z
+- TimeBodyGyroscopeJerkStd-X/Y/Z
+- TimeBodyAccelerometerMagnitudeMean
+- TimeBodyAccelerometerMagnitudeStd
+- TimeGravityAccelerometerMagnitudeMean
+- TimeGravityAccelerometerMagnitudeStd
+- TimeBodyAccelerometerJerkMagnitudeMean
+- TimeBodyAccelerometerJerkMagnitudeStd
+- TimeBodyGyroscopeMagnitudeMean
+- TimeBodyGyroscopeMagnitudeStd
+- TimeBodyGyroscopeJerkMagnitudeMean
+- TimeBodyGyroscopeJerkMagnitudeStd
+- FrequencyBodyAccelerometerMean-X/Y/Z
+- FrequencyBodyAccelerometerStd-X/Y/Z
+- FrequencyBodyAccelerometerJerkMean-X/Y/Z
+- FrequencyBodyAccelerometerJerkStd-X/Y/Z
+- FrequencyBodyGyroscopeMean-X/Y/Z
+- FrequencyBodyGyroscopeStd-X/Y/Z
+- FrequencyBodyAccelerometerMagnitudeMean
+- FrequencyBodyAccelerometerMagnitudeStd
+- FrequencyBodyAccelerometerJerkMagnitudeMean
+- FrequencyBodyAccelerometerJerkMagnitudeStd
+- FrequencyBodyGyroscopeMagnitudeMean
+- FrequencyBodyGyroscopeMagnitudeStd
+- FrequencyBodyGyroscopeJerkMagnitudeMean
+- FrequencyBodyGyroscopeJerkMagnitudeStd
+
+## Transformations
+1. Merged training and test sets
+2. Extracted only mean and standard deviation measurements
+3. Replaced activity codes with descriptive names
+4. Applied descriptive variable names
+5. Created a second tidy data set with averages for each variable by activity and subject

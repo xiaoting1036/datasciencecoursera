@@ -1,0 +1,32 @@
+---
+title: "README"
+author: "ting"
+date: "2025-05-14"
+output: html_document
+---
+
+`# Wearable Computing Tidy Data Project
+
+This project demonstrates the collection, cleaning, and transformation of wearable computing data from Samsung Galaxy S smartphones.
+
+## Project Requirements
+The purpose of this project is to demonstrate ability to collect, work with, and clean a data set to prepare tidy data for later analysis.
+
+## Files Included
+- `run_analysis.R`: R script that performs the data transformation
+- `final_tidy_data.txt`: The resulting tidy data set
+- `CodeBook.md`: Describes the variables, data, and transformations
+- `README.md`: This file explaining the project
+
+## How to Run the Analysis
+1. Download the dataset from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+2. Unzip the file into your working directory
+3. Run the `run_analysis.R` script in R
+4. The script will produce a `final_tidy_data.txt` file with the tidy data
+
+## Script Steps
+1. Merges the training and test sets
+2. Extracts only mean and standard deviation measurements
+3. Uses descriptive activity names
+4. Appropriately labels the data set
+5. Creates a second tidy data set with averages for each variable by activity and subject
